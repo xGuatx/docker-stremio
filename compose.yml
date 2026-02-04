@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  stremio:
+    image: stremio/server:latest
+    container_name: stremio-server
+    restart: unless-stopped
+    ports:
+      - "11470:11470"   # API locale
+      - "12470:12470"   # API externe
+
